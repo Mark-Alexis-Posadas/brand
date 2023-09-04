@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import GlobalStyle, { FlexContainer, StyledMain } from "./globalStyles";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
@@ -9,17 +10,20 @@ import Contact from "./components/contact/Contact";
 const App = () => {
   return (
     <>
-      <Sidebar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+      <GlobalStyle />
+      <FlexContainer>
+        <Sidebar />
+        <StyledMain>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </StyledMain>
+      </FlexContainer>
     </>
   );
 };
