@@ -1,5 +1,12 @@
+import { StyledWrapper } from "../../globalStyles";
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <section>
+      <StyledWrapper>
+        <h1>Contact</h1>
+      </StyledWrapper>
+    </section>
+  );
 };
 
 export default Contact;
