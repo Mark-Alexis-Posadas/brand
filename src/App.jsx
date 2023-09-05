@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import GlobalStyle, { FlexContainer, StyledMain } from "./globalStyles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
@@ -7,6 +9,7 @@ import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
 import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
+
 const App = () => {
   return (
     <>
@@ -22,6 +25,7 @@ const App = () => {
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <FontAwesomeIcon icon={faBars} />
         </StyledMain>
       </FlexContainer>
     </>
