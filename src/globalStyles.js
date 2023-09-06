@@ -8,8 +8,12 @@ export const FlexContainer = styled.div`
 
 export const StyledMain = styled.main`
   width: 100%;
-  margin-left: 300px;
+
   position: relative;
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 300px;
+  }
 `;
 
 export const StyledWrapper = styled.div`

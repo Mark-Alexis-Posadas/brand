@@ -7,4 +7,9 @@ export const StyledSidebar = styled.aside`
   bottom: 0;
   left: 0;
   border-right: 1px solid #dadada;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
 `;
