@@ -1,5 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+
+export const PageTitle = styled.h1`
+  font-size: 1.8rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 6rem;
+  }
+`;
+
 export const FlexContainer = styled.div`
   display: flex;
   min-height: 100vh;
@@ -8,7 +25,6 @@ export const FlexContainer = styled.div`
 
 export const StyledMain = styled.main`
   width: 100%;
-
   position: relative;
 
   @media screen and (min-width: 1024px) {
@@ -17,8 +33,12 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledWrapper = styled.div`
-  max-width: 1200px;
+  max-width: 90%;
   margin: auto;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1200px;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`

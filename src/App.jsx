@@ -10,6 +10,16 @@ import Skills from "./components/skills/Skills";
 import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
 
+// const lightTheme = {
+//   primary: "#ffffff",
+//   textColor: "#131313",
+// };
+
+// const darkTheme = {
+//   primary: "#181818",
+//   textColor: "#ffffff",
+// };
+
 const App = () => {
   return (
     <>

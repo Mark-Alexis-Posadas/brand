@@ -1,9 +1,9 @@
-import { StyledWrapper } from "../../globalStyles";
+import { PageTitle, StyledWrapper } from "../../globalStyles";
 const Projects = () => {
   return (
     <section>
       <StyledWrapper>
-        <h1>Projects</h1>
+        <PageTitle>Projects</PageTitle>
       </StyledWrapper>
     </section>
   );

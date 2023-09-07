@@ -1,10 +1,10 @@
-import { StyledWrapper } from "../../globalStyles";
+import { PageTitle, StyledWrapper } from "../../globalStyles";
 
 const About = () => {
   return (
     <section>
       <StyledWrapper>
-        <h1>About</h1>
+        <PageTitle>About</PageTitle>
         <p>
           Welcome to my portfolio website! My name is Mark Alexis Posadas, and I
           am a front-end developer with a passion for creating beautiful,

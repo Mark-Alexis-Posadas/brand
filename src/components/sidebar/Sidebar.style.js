@@ -12,4 +12,16 @@ export const StyledSidebar = styled.aside`
   @media screen and (min-width: 1024px) {
     display: block;
   }
+
+  ul {
+    margin-top: 100px;
+    margin-left: 60px;
+    li {
+      margin-bottom: 20px;
+      a {
+        text-transform: capitalize;
+        color: #222;
+      }
+    }
+  }
 `;
