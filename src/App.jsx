@@ -9,11 +9,12 @@ import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
 import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
+import { ThemeProvider } from "styled-components";
 
-// const lightTheme = {
-//   primary: "#ffffff",
-//   textColor: "#131313",
-// };
+const lightTheme = {
+  primary: "#ffffff",
+  textColor: "#131313",
+};
 
 // const darkTheme = {
 //   primary: "#181818",
@@ -24,20 +25,22 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <FlexContainer>
-        <Sidebar />
-        <StyledMain>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-          <FontAwesomeIcon icon={faBars} />
-        </StyledMain>
-      </FlexContainer>
+      <ThemeProvider theme={lightTheme}>
+        <FlexContainer>
+          <Sidebar />
+          <StyledMain>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+            <FontAwesomeIcon icon={faBars} />
+          </StyledMain>
+        </FlexContainer>
+      </ThemeProvider>
     </>
   );
 };

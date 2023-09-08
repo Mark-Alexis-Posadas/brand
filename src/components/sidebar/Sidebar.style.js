@@ -15,12 +15,21 @@ export const StyledSidebar = styled.aside`
 
   ul {
     margin-top: 100px;
-    margin-left: 60px;
+
     li {
       margin-bottom: 20px;
+
       a {
+        padding: 10px 46px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         text-transform: capitalize;
-        color: #222;
+        color: ${(props) => props.theme.textColor};
+        &.active {
+          background-color: #222;
+          color: #fff;
+        }
       }
     }
   }
