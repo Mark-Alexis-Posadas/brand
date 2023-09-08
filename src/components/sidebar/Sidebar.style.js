@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const StyledSidebar = styled.aside`
-  width: 300px;
+  background-color: ${(props) => props.theme.primary};
+  width: auto;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
   border-right: 1px solid #dadada;
   display: none;
-
   @media screen and (min-width: 1024px) {
+    width: 300px;
     display: block;
   }
 
@@ -26,9 +28,21 @@ export const StyledSidebar = styled.aside`
         justify-content: space-between;
         text-transform: capitalize;
         color: ${(props) => props.theme.textColor};
+
         &.active {
-          background-color: #222;
-          color: #fff;
+          background-color: ${(props) => props.theme.textColor};
+          color: ${(props) => props.theme.primary};
+        }
+        svg,
+        span {
+          font-size: 18px;
+        }
+
+        span {
+          display: none;
+          @media screen and (min-width: 1024px) {
+            display: block;
+          }
         }
       }
     }

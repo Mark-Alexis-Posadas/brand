@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const PageTitle = styled.h1`
   font-size: 1.8rem;
+  color: ${(props) => props.theme.textColor};
 
   @media screen and (min-width: 768px) {
     font-size: 3rem;
@@ -13,14 +14,12 @@ export const PageTitle = styled.h1`
   }
 
   @media screen and (min-width: 1440px) {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 `;
 
 export const FlexContainer = styled.div`
   display: flex;
-  min-height: 100vh;
-  overflow: hidden;
 `;
 
 export const StyledMain = styled.main`
@@ -49,7 +48,14 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  section {
+    min-height: calc(100vh - 125px);
+    padding-top: 125px;
 
+  }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
 
   ul {
     list-style: none;

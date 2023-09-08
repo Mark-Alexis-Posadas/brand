@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import GlobalStyle, { FlexContainer, StyledMain } from "./globalStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +13,7 @@ import Contact from "./components/contact/Contact";
 import { ThemeProvider } from "styled-components";
 
 const lightTheme = {
+  //colors
   primary: "#ffffff",
   textColor: "#131313",
 };
@@ -37,6 +39,7 @@ const App = () => {
               <Route path="/experience" element={<Experience />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
+
             <FontAwesomeIcon icon={faBars} />
           </StyledMain>
         </FlexContainer>

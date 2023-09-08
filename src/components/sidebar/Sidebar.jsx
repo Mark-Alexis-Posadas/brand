@@ -27,9 +27,9 @@ const Sidebar = () => {
         </li>
         {data.map((link, idx) => (
           <li key={uuidv4()}>
-            <NavLink to={link.path} activeclassName={idx === 0 ? "active" : ""}>
+            <NavLink to={link.path} activeClassName={idx === 0 ? "active" : ""}>
               <FontAwesomeIcon icon={link.icon} />
-              {link.text}
+              <span>{link.text}</span>
             </NavLink>
           </li>
         ))}
