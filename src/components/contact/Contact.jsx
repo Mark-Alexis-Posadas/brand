@@ -1,10 +1,11 @@
 import { PageTitle, StyledWrapper } from "../../globalStyles";
+import { StyledForm } from "./Contact.style";
 const Contact = () => {
   return (
     <section>
       <StyledWrapper>
         <PageTitle>Contact</PageTitle>
-        <form>
+        <StyledForm>
           <fieldset>
             <p>
               <input type="text" placeholder="Name" />
@@ -17,7 +18,7 @@ const Contact = () => {
             </p>
             <input type="submit" value="Submit" />
           </fieldset>
-        </form>
+        </StyledForm>
       </StyledWrapper>
     </section>
   );

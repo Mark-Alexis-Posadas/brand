@@ -47,6 +47,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  input,textarea,button {
+    font-family: "Jost", sans-serif;
+  }
 
   section {
     min-height: calc(100vh - 125px);

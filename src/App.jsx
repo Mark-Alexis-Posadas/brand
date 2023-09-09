@@ -1,8 +1,8 @@
-// import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 import GlobalStyle, { FlexContainer, StyledMain } from "./globalStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
