@@ -7,17 +7,17 @@ const Contact = () => {
         <PageTitle>Contact</PageTitle>
         <StyledForm>
           <fieldset>
-            <p>
+            <div>
               <input type="text" placeholder="Name" />
-            </p>
-            <p>
+            </div>
+            <div>
               <input type="email" placeholder="Email" />
-            </p>
-            <p>
-              <textarea placeholder="Message" cols="30" rows="10"></textarea>
-            </p>
-            <input type="submit" value="Submit" />
+            </div>
+            <div>
+              <textarea placeholder="Message" rows="10"></textarea>
+            </div>
           </fieldset>
+          <input type="submit" value="Submit" />
         </StyledForm>
       </StyledWrapper>
     </section>

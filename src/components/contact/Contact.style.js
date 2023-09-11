@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledForm = styled.form`
   fieldset {
     border: none;
+    width: 100%;
   }
 
   input,
@@ -13,7 +14,9 @@ export const StyledForm = styled.form`
     background-color: rgb(250, 250, 250);
     margin-bottom: 20px;
   }
-  button {
-    width: 100%;
+
+  input[type="submit"] {
+    background-color: ${(props) => props.theme.textColor};
+    color: #fff;
   }
 `;

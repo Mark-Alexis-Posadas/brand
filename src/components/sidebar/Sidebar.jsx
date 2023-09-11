@@ -18,12 +18,14 @@ const Sidebar = () => {
     <StyledSidebar>
       <ul>
         <li>
-          <FontAwesomeIcon
-            onClick={handleClick}
-            icon={themeIcon ? faSun : faMoon}
-            style={{ fontSize: "1.7rem", cursor: "pointer" }}
-            className="fa-rotate-180"
-          />
+          <a href="#">
+            <FontAwesomeIcon
+              onClick={handleClick}
+              icon={themeIcon ? faSun : faMoon}
+              style={{ fontSize: "1.7rem", cursor: "pointer" }}
+              className="fa-rotate-180"
+            />
+          </a>
         </li>
         {data.map((link, idx) => (
           <li key={uuidv4()}>
