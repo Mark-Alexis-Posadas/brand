@@ -2,15 +2,15 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import data from "./data";
 import { StyledSidebar } from "./Sidebar.style";
 
-const Sidebar = () => {
+const Sidebar = ({ toggleMainTheme, isDarkTheme }) => {
   const [themeIcon, setThemeIcon] = useState(false);
 
   const handleClick = () => {
+    toggleMainTheme();
     setThemeIcon(!themeIcon);
   };
 
@@ -21,15 +21,15 @@ const Sidebar = () => {
           <a href="#">
             <FontAwesomeIcon
               onClick={handleClick}
-              icon={themeIcon ? faSun : faMoon}
+              icon={isDarkTheme ? faSun : faMoon}
               style={{ fontSize: "1.7rem", cursor: "pointer" }}
-              className="fa-rotate-180"
+              className={isDarkTheme ? "fa-rotate-180" : ""}
             />
           </a>
         </li>
         {data.map((link, idx) => (
           <li key={uuidv4()}>
-            <NavLink to={link.path} activeclassname={idx === 0 ? "active" : ""}>
+            <NavLink to={link.path} activeClassName="active">
               <FontAwesomeIcon icon={link.icon} />
               <span>{link.text}</span>
             </NavLink>

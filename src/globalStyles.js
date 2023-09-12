@@ -25,6 +25,7 @@ export const FlexContainer = styled.div`
 export const StyledMain = styled.main`
   width: 100%;
   position: relative;
+  background-color: ${(props) => props.theme.primary};
 
   @media screen and (min-width: 1024px) {
     margin-left: 300px;

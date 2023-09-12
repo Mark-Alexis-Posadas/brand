@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import GlobalStyle, { FlexContainer, StyledMain } from "./globalStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./components/sidebar/Sidebar";
@@ -12,24 +11,43 @@ import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
 import { ThemeProvider } from "styled-components";
 
+import GlobalStyle, { FlexContainer, StyledMain } from "./globalStyles";
+
 const lightTheme = {
-  //colors
   primary: "#ffffff",
   textColor: "#131313",
 };
 
-// const darkTheme = {
-//   primary: "#181818",
-//   textColor: "#ffffff",
-// };
+const darkTheme = {
+  primary: "#181818",
+  textColor: "#ffffff",
+};
 
 const App = () => {
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme ? storedTheme : "light";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const isDarkTheme = theme === "dark";
+
+  const toggleMainTheme = () => {
+    setTheme(isDarkTheme ? "light" : "dark");
+  };
+
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <FlexContainer>
-          <Sidebar />
+          <Sidebar
+            toggleMainTheme={toggleMainTheme}
+            isDarkTheme={isDarkTheme}
+          />
           <StyledMain>
             <Routes>
               <Route path="/" element={<Home />} />
