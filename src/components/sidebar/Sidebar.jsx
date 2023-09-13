@@ -6,7 +6,7 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import data from "./data";
 import { StyledSidebar } from "./Sidebar.style";
 
-const Sidebar = ({ toggleMainTheme, isDarkTheme }) => {
+const Sidebar = ({ toggleMainTheme, isDarkTheme, toggleSidebar }) => {
   const [themeIcon, setThemeIcon] = useState(false);
 
   const handleClick = () => {
@@ -15,7 +15,7 @@ const Sidebar = ({ toggleMainTheme, isDarkTheme }) => {
   };
 
   return (
-    <StyledSidebar>
+    <StyledSidebar style={{ display: toggleSidebar ? "block" : "none" }}>
       <ul>
         <li>
           <a href="#">
@@ -29,7 +29,7 @@ const Sidebar = ({ toggleMainTheme, isDarkTheme }) => {
         </li>
         {data.map((link, idx) => (
           <li key={uuidv4()}>
-            <NavLink to={link.path} activeClassName="active">
+            <NavLink to={link.path} activeclassname="active">
               <FontAwesomeIcon icon={link.icon} />
               <span>{link.text}</span>
             </NavLink>

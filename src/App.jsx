@@ -39,15 +39,24 @@ const App = () => {
     setTheme(isDarkTheme ? "light" : "dark");
   };
 
+  const [toggle, setToggle] = useState(true);
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <FlexContainer>
-          <Sidebar
-            toggleMainTheme={toggleMainTheme}
-            isDarkTheme={isDarkTheme}
-          />
+          {toggle && (
+            <Sidebar
+              toggleMainTheme={toggleMainTheme}
+              isDarkTheme={isDarkTheme}
+              toggleSidebar={handleClick}
+            />
+          )}
           <StyledMain>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -58,7 +67,11 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
             </Routes>
 
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon
+              icon={toggle ? faBars : faWindowClose}
+              onClick={handleClick}
+              className="menu-bar"
+            />
           </StyledMain>
         </FlexContainer>
       </ThemeProvider>

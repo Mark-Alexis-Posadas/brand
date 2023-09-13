@@ -75,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  svg.svg-inline--fa.fa-bars {
+  .menu-bar {
     position: absolute;
     right: 37px;
     top: 20px;
