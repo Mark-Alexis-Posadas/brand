@@ -20,6 +20,13 @@ export const StyledSidebar = styled.aside`
 
     li {
       margin-bottom: 20px;
+      &:first-child {
+        padding: 10px 46px;
+        a {
+          width: 21px;
+          padding: 0;
+        }
+      }
 
       a {
         padding: 10px 46px;

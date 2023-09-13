@@ -6,6 +6,9 @@ export const StyledHome = styled.section`
   justify-content: center;
   padding-top: 0;
   min-height: 100vh;
+  .sc-jSwlEQ.dIaJvE {
+    text-align: center;
+  }
 
   @media screen and (min-width: 1366px) {
     h1 {
