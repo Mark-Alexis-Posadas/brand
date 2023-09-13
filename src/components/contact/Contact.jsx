@@ -6,18 +6,18 @@ const Contact = () => {
       <StyledWrapper>
         <PageTitle>Contact</PageTitle>
         <StyledForm>
-          <fieldset>
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <textarea placeholder="Message" rows="10"></textarea>
-            </div>
-          </fieldset>
-          <input type="submit" value="Submit" />
+          <div>
+            <input type="text" placeholder="Name" />
+          </div>
+          <div>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <textarea placeholder="Message" rows="10"></textarea>
+          </div>
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
         </StyledForm>
       </StyledWrapper>
     </section>

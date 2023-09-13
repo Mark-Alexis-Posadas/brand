@@ -1,22 +1,25 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-  fieldset {
-    border: none;
-    width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   input,
   textarea {
-    width: 100%;
     padding: 1rem;
     border: none;
     background-color: rgb(250, 250, 250);
-    margin-bottom: 20px;
+  }
+
+  textarea {
+    min-height: 400px;
   }
 
   input[type="submit"] {
     background-color: ${(props) => props.theme.textColor};
-    color: #fff;
+    color: ${(props) => props.theme.primary};
   }
 `;

@@ -19,7 +19,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  primary: "#181818",
+  primary: "rgb(43, 57, 69)",
   textColor: "#ffffff",
 };
 
