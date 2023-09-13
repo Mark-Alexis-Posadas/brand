@@ -18,6 +18,10 @@ export const PageTitle = styled.h1`
   }
 `;
 
+export const StyledText = styled.p`
+  color: ${(props) => props.theme.textColor};
+`;
+
 export const FlexContainer = styled.div`
   display: flex;
 `;

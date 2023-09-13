@@ -1,16 +1,19 @@
-import { PageTitle, StyledWrapper } from "../../globalStyles";
+import { PageTitle, StyledText, StyledWrapper } from "../../globalStyles";
+import { StyledHome } from "./Home.style";
 
 const Home = () => {
   return (
-    <section>
+    <StyledHome>
       <StyledWrapper>
-        <PageTitle>Hello! I&apos;m Mark Alexis Posadas</PageTitle>
-        <p>
+        <PageTitle>
+          Hello! I&apos;m Mark <br /> Alexis Posadas
+        </PageTitle>
+        <StyledText>
           I am a front-end developer with a passion for creating beautiful,
           functional, and user-friendly websites.
-        </p>
+        </StyledText>
       </StyledWrapper>
-    </section>
+    </StyledHome>
   );
 };
 
