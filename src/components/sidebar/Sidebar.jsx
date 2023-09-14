@@ -27,7 +27,7 @@ const Sidebar = ({ toggleMainTheme, isDarkTheme, toggleSidebar }) => {
             />
           </a>
         </li>
-        {data.map((link, idx) => (
+        {data.map((link) => (
           <li key={uuidv4()}>
             <NavLink to={link.path} activeclassname="active">
               <FontAwesomeIcon icon={link.icon} />

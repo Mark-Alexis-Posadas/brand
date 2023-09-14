@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const StyledSidebar = styled.aside`
   background-color: ${(props) => props.theme.primary};
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 5px, rgba(0, 0, 0, 0.08) 0px 2px 5px;
   width: auto;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
-  border-right: 1px solid #dadada;
   display: none;
   @media screen and (min-width: 1024px) {
     width: 300px;
