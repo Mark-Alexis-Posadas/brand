@@ -1,16 +1,22 @@
 import { useState } from "react";
 import { PageTitle, StyledWrapper } from "../../globalStyles";
 import data from "./data";
-import { StyledArticle, StyledProjectGrid } from "./Projects.style";
+import {
+  StyledArticle,
+  StyledProjectFlex,
+  StyledProjectGrid,
+} from "./Projects.style";
 const Projects = () => {
   return (
     <section>
       <StyledWrapper>
         <PageTitle>Projects</PageTitle>
-        <div>
+        <StyledProjectFlex>
           <div>
             <button>Javascript</button>
             <button>React JS</button>
+
+            <button>HTML & CSS</button>
           </div>
           <StyledProjectGrid>
             {data.map((projects) => {
@@ -29,7 +35,7 @@ const Projects = () => {
               );
             })}
           </StyledProjectGrid>
-        </div>
+        </StyledProjectFlex>
       </StyledWrapper>
     </section>
   );

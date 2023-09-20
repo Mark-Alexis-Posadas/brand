@@ -11,5 +11,32 @@ export const StyledProjectGrid = styled.div`
   @media screen and (min-width: 1024px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+`;
+
+export const StyledProjectFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  div {
+    width: calc(20% - 15px);
+    margin-right: 15px;
+
+    button {
+      background-color: ${(props) => props.theme.textColor};
+      color: ${(props) => props.theme.primary};
+      border: none;
+      outline: none;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+    }
+    &:last-child {
+      width: 80%;
+      margin-right: 0px;
+    }
   }
 `;
