@@ -6,6 +6,21 @@ import {
   StyledProjectFlex,
   StyledProjectGrid,
 } from "./Projects.style";
+
+const filterButtons = [
+  {
+    id: 1,
+    text: "JavaScript",
+  },
+  {
+    id: 2,
+    text: "React JS",
+  },
+  {
+    id: 3,
+    text: "HTML & CSS",
+  },
+];
 const Projects = () => {
   return (
     <section>
@@ -13,10 +28,9 @@ const Projects = () => {
         <PageTitle>Projects</PageTitle>
         <StyledProjectFlex>
           <div>
-            <button>Javascript</button>
-            <button>React JS</button>
-
-            <button>HTML & CSS</button>
+            {filterButtons.map((button) => {
+              return <button key={button.id}>{button.text}</button>;
+            })}
           </div>
           <StyledProjectGrid>
             {data.map((projects) => {
