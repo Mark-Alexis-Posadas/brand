@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { PageTitle, StyledWrapper } from "../../globalStyles";
 import data from "./data";
 import {
@@ -10,18 +10,34 @@ import {
 const filterButtons = [
   {
     id: 1,
-    text: "JavaScript",
+    text: "All",
   },
   {
     id: 2,
-    text: "React JS",
+    text: "JavaScript",
   },
   {
     id: 3,
+    text: "React JS",
+  },
+  {
+    id: 4,
     text: "HTML & CSS",
   },
 ];
+
 const Projects = () => {
+  const [selectedFilter, setSelectedFilter] = useState("All");
+
+  const handleFilterClick = (filter) => {
+    setSelectedFilter(filter);
+  };
+
+  const filteredProjects =
+    selectedFilter === "All"
+      ? data
+      : data.filter((project) => project.tags.includes(selectedFilter));
+
   return (
     <section>
       <StyledWrapper>
@@ -29,22 +45,31 @@ const Projects = () => {
         <StyledProjectFlex>
           <div>
             {filterButtons.map((button) => {
-              return <button key={button.id}>{button.text}</button>;
+              return (
+                <button
+                  onClick={() => handleFilterClick(button.text)}
+                  key={button.id}
+                  className={selectedFilter === button.text ? "active" : ""}
+                >
+                  {button.text}
+                </button>
+              );
             })}
           </div>
           <StyledProjectGrid>
-            {data.map((projects) => {
-              const { id, image, pageTitle, description, source, demo } =
-                projects;
+            {filteredProjects.map((project) => {
+              const { id, image, pageTitle, description, source, demo, tags } =
+                project;
               return (
                 <StyledArticle key={id}>
                   <figure>
-                    <img src={image} alt={image} />
+                    <img src={image} alt={pageTitle} />
                   </figure>
                   <header>
                     <h1>{pageTitle}</h1>
                   </header>
                   <p>{description}</p>
+                  <span>{tags.join(", ")}</span>
                 </StyledArticle>
               );
             })}

@@ -1,7 +1,6 @@
 const data = [
   {
     id: 1,
-    image: "src/assets/projects-images/tab.png",
     pageTitle: "Tab",
     description:
       "This project is a simple implementation of tabs using Vanilla JavaScript. It allows you to switch between different content sections without the need for page refresh.",
@@ -21,7 +20,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["HTML & CSS"],
   },
 
   {
@@ -33,7 +32,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["React JS"],
   },
 ];
 

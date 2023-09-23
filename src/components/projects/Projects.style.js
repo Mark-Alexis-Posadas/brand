@@ -23,9 +23,8 @@ export const StyledProjectFlex = styled.div`
     margin-right: 15px;
 
     button {
-      background-color: ${(props) => props.theme.textColor};
-      color: ${(props) => props.theme.primary};
-      border: none;
+      border: 1px solid ${(props) => props.theme.textColor};
+      background-color: #fff;
       outline: none;
       margin-bottom: 10px;
       padding: 10px;
