@@ -28,6 +28,10 @@ export const StyledProjectFlex = styled.div`
       outline: none;
       margin-bottom: 10px;
       padding: 10px;
+      &.active {
+        background-color: ${(props) => props.theme.textColor};
+        color: ${(props) => props.theme.primary};
+      }
     }
     &:first-child {
       display: flex;

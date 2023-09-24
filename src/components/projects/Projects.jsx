@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { PageTitle, StyledWrapper } from "../../globalStyles";
 import data from "./data";
 import {
@@ -56,6 +58,7 @@ const Projects = () => {
               );
             })}
           </div>
+
           <StyledProjectGrid>
             {filteredProjects.map((project) => {
               const { id, image, pageTitle, description, source, demo, tags } =
@@ -69,6 +72,31 @@ const Projects = () => {
                     <h1>{pageTitle}</h1>
                   </header>
                   <p>{description}</p>
+
+                  <ul>
+                    {project.buttons.map((button, idx) => {
+                      let href = "";
+
+                      if (button === "Demo") {
+                        href = demo;
+                      } else if (button === "Source") {
+                        href = source;
+                      }
+
+                      return (
+                        <li key={idx}>
+                          <a
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {button}
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
                   <span>{tags.join(", ")}</span>
                 </StyledArticle>
               );
