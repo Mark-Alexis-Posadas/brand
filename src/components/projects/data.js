@@ -13,7 +13,7 @@ const data = [
 
   {
     id: 2,
-    pageTitle: "Vanilla JS Accordion",
+    pageTitle: "You might not need JS",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
     source:
@@ -25,14 +25,14 @@ const data = [
 
   {
     id: 3,
-    pageTitle: "Vanilla JS Multiple Tabs",
+    pageTitle: "Vanilla JS  Multiple Tabs",
     description:
       "This project demonstrates how to create a multiple tabs interface using vanilla JavaScript.",
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["JavaScript"],
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
@@ -55,7 +55,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
@@ -67,7 +67,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
@@ -79,7 +79,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
@@ -91,7 +91,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
@@ -103,11 +103,11 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
-    id: 9,
+    id: 10,
     pageTitle: "Remove Element",
     description:
       "This project demonstrates how to create a multiple tabs interface using vanilla JavaScript.",
@@ -115,11 +115,11 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 
   {
-    id: 10,
+    id: 11,
     pageTitle: "Accordion",
     description:
       "This project demonstrates how to create a multiple tabs interface using vanilla JavaScript.",
@@ -127,7 +127,7 @@ const data = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
     demo: "https://multiple-tabs.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["React JS"],
+    tags: ["React"],
   },
 ];
 

@@ -20,7 +20,7 @@ const filterButtons = [
   },
   {
     id: 3,
-    text: "React JS",
+    text: "React",
   },
   {
     id: 4,
@@ -38,7 +38,11 @@ const Projects = () => {
   const filteredProjects =
     selectedFilter === "All"
       ? data
-      : data.filter((project) => project.tags.includes(selectedFilter));
+      : data.filter((project) =>
+          project.tags.some(
+            (tag) => tag.toLowerCase() === selectedFilter.toLowerCase()
+          )
+        );
 
   return (
     <section>
