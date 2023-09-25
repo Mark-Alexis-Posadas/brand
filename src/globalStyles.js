@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 export const PageTitle = styled.h1`
-  font-size: 1.8rem;
   color: ${(props) => props.theme.textColor};
-
+  font-size: 1.8rem;
+  font-weight: 700;
   @media screen and (min-width: 768px) {
     font-size: 3rem;
   }
@@ -14,7 +14,8 @@ export const PageTitle = styled.h1`
   }
 
   @media screen and (min-width: 1440px) {
-    font-size: 5rem;
+    font-size: 4.3rem;
+    margin-bottom: 20px;
   }
 `;
 
@@ -43,6 +44,10 @@ export const StyledWrapper = styled.div`
   @media screen and (min-width: 1024px) {
     max-width: 1200px;
   }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1400px;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -62,6 +67,7 @@ const GlobalStyle = createGlobalStyle`
 
   }
   h1,h2,h3,h4,h5,h6 {
+
     margin: 0;
   }
 
